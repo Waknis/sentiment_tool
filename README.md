@@ -9,7 +9,7 @@ This project implements a sentiment analysis tool using Python and scikit-learn 
 - Text preprocessing using NLTK
 - TF-IDF vectorization for feature extraction
 - Logistic regression for sentiment classification
-- Support for training on custom datasets
+- Support for training on the Amazon Fine Food Reviews dataset
 - Evaluation of model performance
 - Prediction of sentiment for new reviews
 
@@ -19,6 +19,7 @@ This project implements a sentiment analysis tool using Python and scikit-learn 
 - pandas
 - scikit-learn
 - nltk
+- Kaggle account (for downloading the dataset)
 
 ## Installation
 
@@ -43,11 +44,20 @@ This project implements a sentiment analysis tool using Python and scikit-learn 
    nltk.download('punkt_tab')
    ```
 
+## Dataset
+
+This project uses the Amazon Fine Food Reviews dataset. To download the dataset:
+
+1. Go to the Kaggle dataset page: https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews
+2. If you don't have a Kaggle account, you'll need to create one (it's free).
+3. Click the "Download" button on the dataset page.
+4. Once downloaded, extract the ZIP file.
+5. Locate the file named "Reviews.csv" in the extracted folder.
+6. Move "Reviews.csv" to the same directory as the sentiment analysis script.
+
 ## Usage
 
-1. Prepare your dataset:
-   - The script expects a CSV file named 'Reviews.csv' in the same directory.
-   - The CSV should have at least two columns: 'Text' (containing the review text) and 'Score' (containing the numerical rating).
+1. Ensure you've downloaded and placed the "Reviews.csv" file in the project directory as described in the Dataset section.
 
 2. Run the script:
    ```
@@ -60,7 +70,6 @@ This project implements a sentiment analysis tool using Python and scikit-learn 
 
 ## Customization
 
-- To use a different dataset, modify the `load_data` function in the script to match your CSV file's structure.
 - You can adjust the `max_features` parameter in the `TfidfVectorizer` to change the number of features used.
 - The `classify_sentiment` function can be modified to change how numerical scores are mapped to sentiment categories.
 
