@@ -61,7 +61,7 @@ This project uses the Amazon Fine Food Reviews dataset. To download the dataset:
 
 2. Run the script:
    ```
-   python sentiment_analysis.py
+   python main.py
    ```
 
 3. The script will output:
